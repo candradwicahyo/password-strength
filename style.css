@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --font: 'Open Sans';
+  --gray: #f4f7fe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.header {
+  position: relative;
+  padding: 30px;
+  background: var(--gray);
+  margin-bottom: 20px;
+}
+
+.header h1 { margin-bottom: 10px; }
+
+.header p { font-size: 14px; }
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #333;
+}
+
+.form-group .input {
+  position: relative;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: var(--gray);
+  padding: 0 30px;
+  margin: 10px 0;
+}
+
+.form-group .input::placeholder { font-size: 12px; }
+
+.form-group .wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.form-group .wrapper .password-bar-container {
+  position: relative;
+  width: 200px;
+  height: 15px;
+  background: #f3f3f3;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.form-group .wrapper .password-bar-container .password-bar {
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.form-group .wrapper .password-text {
+  font-size: 13px;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .container { width: 90%; }
+  
+  .form-group { width: 100%; }
+}
